@@ -1,0 +1,36 @@
+@media handheld {
+html {
+		-webkit-text-size-adjust: none;
+		}
+
+
+* {
+	float: none;
+	}
+
+html, body {
+	font: 12px/15px sans-serif;
+	background: #fff;
+	padding: 3px;
+	color: #000;
+	margin: 0;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	}
+
+#sidebar, #footer {
+	display: none;
+	}
+
+a:link, a:visited {
+	text-decoration: underline;
+	color: #0000CC;
+	}
+a:hover, a:active {
+	text-decoration: underline;
+	color: #660066;
+	}
+
+}
