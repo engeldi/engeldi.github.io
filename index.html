@@ -10,15 +10,58 @@
   <![endif]-->
   <link rel="stylesheet" href="style/main.css" type="text/css" media="Screen">
   <link rel="stylesheet" href="style/mobile.css" type="text/css" media="handheld" />
+  <style>
+    @media (max-width: 99px){
+        #Start:after {
+            content: "(max-width: 99px)";
+        }
+    }
+    @media (min-width: 100px) and (max-width: 199px) {
+        #Start:after {
+            content: "(min-width: 100px) and (max-width: 199px)";
+        }
+    }
+    @media (min-width: 200px) and (max-width: 299px) {
+        #Start:after {
+            content: "(min-width: 200px) and (max-width: 299px)";
+        }
+    }
+    @media (min-width: 300px) and (max-width: 399px) {
+        #Start:after {
+            content: "(min-width: 300px) and (max-width: 399px)";
+        }
+    }
+    @media (min-width: 400px) and (max-width: 499px) {
+        #Start:after {
+            content: "(min-width: 400px) and (max-width: 499px)";
+        }
+    }
+    @media (min-width: 500px) and (max-width: 599px) {
+        #Start:after {
+            content: "(min-width: 500px) and (max-width: 599px)";
+        }
+    }
+    @media (min-width: 600px) {
+        #Start:after {
+            content: "(min-width: 600px)";
+        }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Een tekstje</h1>
   </header>
   <article>
-    <p>Test tekst. Een beetje meer.</p>
+    <p id="Start">Test tekst. Een beetje meer.</p>
   </article>
   <p><a href="http://googlesamples.github.io/web-fundamentals/samples/layouts/rwd-fundamentals/media-queries.html">
 TEST</a></p>
+
+<article>
+  <h1>Info</h1>
+  <p>Smartphone in landscape: tussen 500px en 600px</p>
+  <p>Smartphone in portrait: minder dan 640px</p>
+</article>
 </body>
 </html>
