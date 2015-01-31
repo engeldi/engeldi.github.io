@@ -1,76 +1,45 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-  <title>Website experiment</title>
+  <title>responsive / mobiele website, experiment</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" href="style/main.css" type="text/css" media="Screen">
-  <link rel="stylesheet" href="style/mobile.css" type="text/css" media="handheld" />
   <style>
-    @media (max-width: 99px){
-        #Start:after {
-            content: "(max-width: 99px)";
-        }
-    }
-    @media (min-width: 100px) and (max-width: 199px) {
-        #Start:after {
-            content: "(min-width: 100px) and (max-width: 199px)";
-        }
-    }
-    @media (min-width: 200px) and (max-width: 299px) {
-        #Start:after {
-            content: "(min-width: 200px) and (max-width: 299px)";
-        }
-    }
-    @media (min-width: 300px) and (max-width: 399px) {
-        #Start:after {
-            content: "(min-width: 300px) and (max-width: 399px)";
-        }
-    }
-    @media (min-width: 400px) and (max-width: 499px) {
-        #Start:after {
-            content: "(min-width: 400px) and (max-width: 499px)";
-        }
-    }
-    @media (min-width: 500px) and (max-width: 599px) {
-        #Start:after {
-            content: "(min-width: 500px) and (max-width: 599px)";
-        }
-    }
-    @media (min-width: 600px) {
-        #Start:after {
-            content: "(min-width: 600px)";
-        }
-    }
+
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+   /* For mobile, it's typically better to position checkbox on top of clickable
+      area and turn opacity to 0 instead. */
+}
+
+/* Default State */
+div {
+   background: green;
+   width: 400px;
+   height: 100px;
+   line-height: 100px;
+   color: white;
+   text-align: center;
+}
+
+/* Toggled State */
+input[type=checkbox]:checked ~ div {
+   background: red;
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Een tekstje</h1>
-  </header>
-  <article>
-    <p id="Start">Test tekst. Een beetje meer.</p>
-  </article>
-  
-<ul>
-  <li><a href="http://alistapart.com/article/responsive-web-design/">http://alistapart.com/article/responsive-web-design/</a></li>
-  <li><a href="https://developers.google.com/web/fundamentals/layouts/">https://developers.google.com/web/fundamentals/layouts/</a></li>
-  <li><a href="http://www.lukew.com/ff/entry.asp?1514">http://www.lukew.com/ff/entry.asp?1514</a></li>
-  <li><a href="http://www.feedthebot.com/mobile/">http://www.feedthebot.com/mobile/</a></li>
-  <li><a href=""></a></li>
-</ul>
 
-<article>
-  <h1>Info</h1>
-  <p>Smartphone in landscape: tussen 500px en 599px</p>
-  <p>Smartphone in portrait: tussen 300px en 399px</p>
-</article>
+<label for="toggle-1">Do Something</label>
+<input type="checkbox" id="toggle-1">
+<div>Control me</div>
 
-<!--link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
-    <link rel="stylesheet" media="(orientation: landscape)" href="landscape.css" -->
 </body>
 </html>
