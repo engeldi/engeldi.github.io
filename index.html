@@ -10,36 +10,63 @@
   <![endif]-->
   <style>
 
-input[type=checkbox] {
+input_[type=checkbox] {
    position: absolute;
    top: -9999px;
    left: -9999px;
    /* For mobile, it's typically better to position checkbox on top of clickable
       area and turn opacity to 0 instead. */
 }
+#toggle-nav {
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity: 0;
+}
+
+#menu_section {
+    position: relative;
+}
 
 /* Default State */
-div {
+nav {
    background: green;
    width: 400px;
    height: 100px;
-   line-height: 100px;
    color: white;
    text-align: center;
+   display: none;
 }
 
 /* Toggled State */
-input[type=checkbox]:checked ~ div {
+input_[type=checkbox]:checked ~ div {
    background: red;
+}
+#toggle-nav:checked + nav {
+   background: red;
+   display: block;
+   position: absolute;
+   top: 30px;
+   left: 0;
 }
 
   </style>
 </head>
 <body>
 
-<label for="toggle-1">Do Something</label>
-<input type="checkbox" id="toggle-1">
-<div>Control me</div>
+<section id="menu_section">
+<label for="toggle-nav"><img src="menu.png">
+</label>
+<input type="checkbox" id="toggle-nav">
+<nav>
+  <ul>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+</nav>
+</section>
+<p>Nog een paragraaf</p>
 
 </body>
 </html>
