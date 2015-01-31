@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="nl-BE">
 <head>
   <title>responsive / mobiele website, experiment</title>
@@ -42,7 +42,7 @@ nav {
 input_[type=checkbox]:checked ~ div {
    background: red;
 }
-#toggle-nav:checked + nav {
+#toggle-nav:checked +  nav {
    background: red;
    display: block;
    position: absolute;
@@ -50,12 +50,20 @@ input_[type=checkbox]:checked ~ div {
    left: 0;
 }
 
+label {
+    cursor: pointer;
+}
+_label:after {
+        position: absolute;
+        content: "\2261";
+    }
+
   </style>
 </head>
 <body>
 
 <section id="menu_section">
-<label for="toggle-nav"><img src="menu.png">
+<label for="toggle-nav" onclick><img src="menu.png">
 </label>
 <input type="checkbox" id="toggle-nav">
 <nav>
@@ -63,10 +71,13 @@ input_[type=checkbox]:checked ~ div {
     <li><a href="#">Menu 1</a></li>
     <li><a href="#">Menu 2</a></li>
     <li><a href="#">Menu 3</a></li>
+    <li><a href="http://css-tricks.com/responsive-menu-concepts/">responsive menu concepts</a></li>
   </ul>
 </nav>
 </section>
 <p>Nog een paragraaf</p>
+<p>&#x2261;</p>
+<p>≡</p>
 
 </body>
 </html>
